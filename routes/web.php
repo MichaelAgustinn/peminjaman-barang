@@ -9,10 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/barang', [BarangController::class, 'tampil'])->name('barang.tampil');
-Route::get('/barang/tambah', [BarangController::class, 'tambah'])->name('barang.tambah');
-Route::post('/barang/submit', [BarangController::class, 'submit'])->name('barang.submit');
-Route::get('/barang/edit/{id}', [BarangController::class, 'edit'])->name('barang.edit');
-// Route::post('/barang/update/{id}', [BarangController::class, 'update'])->name('barang.update');
-Route::post('/barang/delete/{id}', [BarangController::class, 'delete'])->name('barang.delete');
-Route::put('/barang/update/{id}', [BarangController::class, 'update'])->name('barang.update');
+Route::get('/admin', [BarangController::class, 'tampil'])->name('barang.tampil');
+Route::get('/admin/tambah', [BarangController::class, 'tambah'])->name('barang.tambah');
+Route::post('/admin/submit', [BarangController::class, 'submit'])->name('barang.submit');
+Route::get('/admin/edit/{id}', [BarangController::class, 'edit'])->name('barang.edit');
+Route::post('/admin/delete/{id}', [BarangController::class, 'delete'])->name('barang.delete');
+Route::put('/admin/update/{id}', [BarangController::class, 'update'])->name('barang.update');
+Route::get('/', [BarangController::class, 'index'])->name('barang.index');

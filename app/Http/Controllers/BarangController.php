@@ -15,6 +15,14 @@ class BarangController extends Controller
         return view('barang.tampil', compact('barang'));
     }
 
+    function index()
+    {
+        $barang = Barang::get();
+        return view('welcome', compact('barang'));
+    }
+
+
+
     function tambah()
     {
         return view('barang.tambah');
